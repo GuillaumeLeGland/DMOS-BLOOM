@@ -1,6 +1,6 @@
 # DMOS-BLOOM
 
-Code and data for the Dynamical Model of Organic Sulfur production and consumption during phytoplankton blooms (DMOS-BLOOM)
+Code and data for the Dynamical Model of Oceanic Sulfur production and consumption during phytoplankton blooms (DMOS-BLOOM)
 
 The version DMOS_BLOOM_v1, currently the only available version, was used to write the article submitted to Limnology and Oceanography in early November 2022
 by Guillaume Le Gland, Marta Masdeu-Navarro, Martí Galí, Sergio M. Vallina, Matti Gralka, Flora Vincent, Otto Cordero, Assaf Vardi and Rafel Simó.
