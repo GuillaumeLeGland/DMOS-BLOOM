@@ -1,4 +1,4 @@
-# DMOS_BLOOM
+# DMOS-BLOOM
 
 Code and data for the Dynamical Model of Organic Sulfur production and consumption during phytoplankton blooms (DMOS-BLOOM)
 
