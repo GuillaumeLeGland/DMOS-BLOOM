@@ -26,7 +26,7 @@ param.deltat  = 1/24; % Time step (d)
 % Microbial model parameters
 %..........................................................................
 
-% Physical parameters
+% Physical parameters (from BERGEN-PAR-TEMP.xlsx)
 param.temp = [11.52,11.52,11.52,11.58,12.67,12.88,13.33,13.81,14.01,15.68,16.28,16.37,14.49,13.22,14.17,15.12,15.82,...
               16.48,15.04,12.91,11.80,11.27,10.88,11.27;...
               11.48,11.99,11.91,11.88,12.63,13.08,13.44,14.11,14.78,15.95,16.83,16.81,14.97,14.14,14.66,15.19,15.84,...
@@ -41,24 +41,24 @@ param.PAR  = [133.11,131.73,135.45,129.35,127.60,131.21,126.82,127.87,129.80,130
 
 % PHYTOPLANKTON
 param.mup0 = [0.7; 0.7; 0.7; 0.7]; % Maximum growth rate (d-1)
-param.Kn   = [0.5; 0.5; 0.5; 0.5]; % Half-saturation constant for DIN (然)
+param.Kn   = [0.5; 0.5; 0.5; 0.5]; % Half-saturation constant for DIN (繕M)
 param.mp   = [0.05; 0.05; 0.05; 0.05]; % Linear mortality rate (d-1)
 
 % HETEROTROPHIC BACTERIA
 param.mub0 = 5.0;  % Maximum uptake rate (d-1)
-param.Kon  = 5.0;  % Half-saturation constant for ON (然)
-%param.Aon  = param.mub0 / param.Kon; % Affinity for ON (d-1 然-1)
+param.Kon  = 5.0;  % Half-saturation constant for ON (繕M)
+%param.Aon  = param.mub0 / param.Kon; % Affinity for ON (d-1 繕M-1)
 param.omeB = 0.25; % Assimilation efficiency (the rest goes to DIN) (-)
 param.mb   = 0.1;  % Linear mortality rate (d-1)
 
 % ZOOPLANKTON (one for each prey type)
 param.muz0  = 1.4 * ones(5,1);  % Maximum grazing rate (d-1)
-param.Kz    = 4.0 * ones(5,1);  % Half-saturation constant for food (然-N)
+param.Kz    = 4.0 * ones(5,1);  % Half-saturation constant for food (繕M-N)
 param.Kz(1) = 2.0;    
 param.betaz = 0.7 * ones(5,1);  % Assimilation efficiency (-)
 param.epsz  = 0.25 * ones(5,1); % Fraction of unassimilated food going to DIN (the rest goes to ON) (-)
 param.mz1   = 0.05 * ones(5,1); % Linear mortality rate (d-1)
-param.mz2   = 0.5 * ones(5,1);  % Quadratic mortality rate (然-1 d-1)
+param.mz2   = 0.5 * ones(5,1);  % Quadratic mortality rate (繕M-1 d-1)
 
 param.omeM = 0.25; % Fraction of mortality (all plankton types) going to DIN (the rest goes to ON) (-)
 
@@ -67,11 +67,11 @@ param.wON = 0.05; % New value after revision to better reproduce PON observation
 
 %..........................................................................
 
-% Initial nitrate concentration (然)
+% Initial nitrate concentration (繕M)
 param.DIN0  = 0.27;
 param.ON0   = 1.5;  % Around 10.0 in observations. We will suppose 15% is labile.
 
-% Initial concentration of phytoplankton species, in 然-N (Le Gland, 29/11/2021)
+% Initial concentration of phytoplankton species, in 繕M-N (Le Gland, 29/11/2021)
 param.pico0 = 0.45;
 param.nano0 = [0.3; 0.005];
 param.Ehux0 = 0.01;
